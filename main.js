@@ -20,6 +20,11 @@ $(document).ready(function () {
             window.open("https://gustullays.ro/"); 
         swipe = false;
     });
+    $("#sageata").animate({left: "-300px"}, "slow", function(){
+        $(this).css("margin-left", "60px");
+        $(this).addClass("sageata-anim");
+    });
+    $(premii[index]).addClass("premiu-anim");
 });
 
 function initPosition(){    
@@ -31,16 +36,22 @@ function initPosition(){
 
 function swiperight(){
     if(index > 0){
+        $(premii[index]).removeClass("premiu-anim");
         $(premii[index]).animate({left: rightMargin});
-        $(premii[index-1]).animate({left: center});
+        $(premii[index-1]).animate({left: center}, "fast", function(){
+            $(this).addClass("premiu-anim");
+        });
         index--;
     }
 }
 
 function swipeleft(){
     if(index < premii.length-1){
+        $(premii[index]).removeClass("premiu-anim");
         $(premii[index]).animate({left: leftMargin});
-        $(premii[index+1]).animate({left: center});
+        $(premii[index+1]).animate({left: center}, "fast", function(){
+            $(this).addClass("premiu-anim");
+        });
         index++;
     }
 }

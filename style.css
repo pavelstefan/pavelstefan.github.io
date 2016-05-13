@@ -16,8 +16,7 @@
     position: absolute;
     width: 300px;
     height: 175px;
-    margin: 0px 0px 75px 0px;
-    //border: 1px solid red;
+    margin: 0px 0px 75px 0px;    
 }
 
 .premiu{
@@ -40,6 +39,41 @@
     background-image: url("images/premiu3.png");    
 }
 
+.premiu-anim{
+    animation: anim-premiu 1.5s 3;
+    -webkit-animation: anim-premiu 1.5s 3;
+}
+
+@-webkit-keyframes anim-premiu{
+    0%{
+        left: 0px;
+    }
+    25%{
+        left: -6.5px;
+    }
+    75%{
+        left: 13px;
+    }
+    100%{
+        left: 0px;
+    }
+}
+
+@keyframes anim-premiu{
+    0%{
+        left: 0px;
+    }
+    25%{
+        left: -6.5px;
+    }
+    75%{
+        left: 13px;
+    }
+    100%{
+        left: 0px;
+    }
+}
+
 #sageata{
     position: absolute;
     margin-top: 187px;
@@ -49,25 +83,29 @@
     height: 51px;
     opacity: 0.5;
     background-image: url("images/sageata.png");
-    animation: anim 2.5s infinite;
-    -webkit-animation: anim 3s infinite;
+    
+}
+
+.sageata-anim{
+    animation: anim 1.5s infinite;
+    -webkit-animation: anim 1.5s infinite;
 }
 
 @-webkit-keyframes anim{
     from{
-        left: 10px;
+        left: 0px;
     }
     to{
-        left: -300px;
+        left: -100px;
     }
 }
 
 @keyframes anim{
     from{
-        left: 10px;
+        left: 0px;
     }
     to{
-        left: -300px;
+        left: -100px;
     }
 }
 
