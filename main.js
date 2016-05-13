@@ -3,15 +3,23 @@ var index = 0;//pentru premii
 var center = "0px";//center position
 var leftMargin = "-266px";//left position outside 
 var rightMargin = "150px";//right position outside
+var swipe = false;
 
 $(document).ready(function () {
     initPosition();
     $(".swipe").on("swiperight", function () {
+        swipe = true;
         swiperight();
     })
     $(".swipe").on("swipeleft", function () {
+        swipe = true;
         swipeleft();
     })
+    $(".swipe").click(function(){
+        if(!swipe)
+            window.open("https://gustullays.ro/"); 
+        swipe = false;
+    });
 });
 
 function initPosition(){    

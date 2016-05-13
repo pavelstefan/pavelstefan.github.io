@@ -7,9 +7,17 @@
     position: relative;
     width: 300px;
     height: 250px;
-    background-image: url("images/img.png");
+    background-image: url("images/img.jpg");
     overflow: hidden;    
     font-family: Gotham-Black;
+}
+
+#click{
+    position: absolute;
+    width: 300px;
+    height: 175px;
+    margin: 0px 0px 75px 0px;
+    //border: 1px solid red;
 }
 
 .premiu{
@@ -65,7 +73,7 @@
 
 #logo{
     position: absolute;
-    margin-top: -13px;
+    margin-top: -4px ;
     margin-left: -58px;
     background-color: #fedb00;
 }
@@ -74,7 +82,7 @@
     height: 75px;
     position: absolute;
     display: inline-block;
-    margin-top: 180px;
+    margin-top: 170px;
     padding-top: 10px;
     margin-left: 0px;
     padding-left: 58px;
