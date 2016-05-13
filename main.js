@@ -20,7 +20,7 @@ $(document).ready(function () {
             window.open("https://gustullays.ro/"); 
         swipe = false;
     });
-    $("#sageata").animate({left: "-300px"}, "slow", function(){
+    $("#sageata").animate({left: "-300px"}, 2000, function(){
         $(this).css("margin-left", "60px");
         $(this).addClass("sageata-anim");
     });
