@@ -30,8 +30,22 @@ $(document).ready(function () {
 function initPosition(){    
     $(premii[1]).css("opacity", "0");
     $(premii[2]).css("opacity", "0");
-    $(premii[1]).animate({left: rightMargin}, "fast", function(){$(premii[1]).css("opacity", "1");});
-    $(premii[2]).animate({left: rightMargin}, "fast", function(){$(premii[2]).css("opacity", "1");});    
+    $(premii[1]).animate({left: rightMargin}, "fast", function(){$(this).css("opacity", "1");});
+    $(premii[2]).animate({left: rightMargin}, "fast", function(){$(this).css("opacity", "1");});    
+}
+
+function resetLeft(){
+    $(premii[0]).css("opacity", "0");
+    $(premii[1]).css("opacity", "0");
+    $(premii[0]).animate({left: rightMargin}, "fast", function(){$(this).css("opacity", "1");});
+    $(premii[1]).animate({left: rightMargin}, "fast", function(){$(this).css("opacity", "1");});
+}
+
+function resetRight(){
+    $(premii[1]).css("opacity", "0");
+    $(premii[2]).css("opacity", "0");
+    $(premii[1]).animate({left: leftMargin}, "fast", function(){$(this).css("opacity", "1");});
+    $(premii[2]).animate({left: leftMargin}, "fast", function(){$(this).css("opacity", "1");});
 }
 
 function swiperight(){
@@ -42,6 +56,17 @@ function swiperight(){
             $(this).addClass("premiu-anim");
         });
         index--;
+    }else{
+        resetRight();        
+        $(premii[index]).removeClass("premiu-anim");
+        $(premii[index]).animate({left: rightMargin});
+        index = 2;
+        
+        $(premii[index]).animate({left: center}, "fast", function(){
+            $(this).addClass("premiu-anim");
+            $(premii[0]).css("opacity", "0");
+            $(premii[0]).animate({left: leftMargin}, "fast", function(){$(this).css("opacity", "1");});
+        });
     }
 }
 
@@ -53,5 +78,16 @@ function swipeleft(){
             $(this).addClass("premiu-anim");
         });
         index++;
+    }else{
+        resetLeft(); 
+        $(premii[index]).removeClass("premiu-anim");
+        $(premii[index]).animate({left: leftMargin});        
+        
+        index = 0;
+        $(premii[index]).animate({left: center}, "fast", function(){
+            $(this).addClass("premiu-anim");
+            $(premii[2]).css("opacity", "0");
+            $(premii[2]).animate({left: rightMargin}, "fast", function(){$(this).css("opacity", "1");});
+        });
     }
 }
