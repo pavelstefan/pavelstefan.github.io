@@ -8,7 +8,7 @@
     width: 300px;
     height: 250px;
     background-image: url("images/img.jpg");
-    overflow: hidden;    
+    overflow: hidden;
     font-family: Gotham-Black;
 }
 
@@ -16,15 +16,15 @@
     position: absolute;
     width: 300px;
     height: 175px;
-    margin: 0px 0px 75px 0px;    
+    margin: 0px 0px 75px 0px;
 }
 
 .premiu{
     position: absolute;
-    margin-top: 187px;    
+    margin-top: 187px;
     margin-left: 196.5px;
     width: 81px;
-    height: 51px;    
+    height: 51px;
 }
 
 #premiu1{
@@ -36,7 +36,7 @@
 }
 
 #premiu3{
-    background-image: url("images/premiu3.png");    
+    background-image: url("images/premiu3.png");
 }
 
 .premiu-anim{
@@ -83,29 +83,35 @@
     height: 51px;
     opacity: 0.5;
     background-image: url("images/sageata.png");
-    
+
 }
 
 .sageata-anim{
-    animation: anim 1.5s infinite;
-    -webkit-animation: anim 1.5s infinite;
+    animation: anim 2s infinite;
+    -webkit-animation: anim 2s infinite;
 }
 
 @-webkit-keyframes anim{
-    from{
+    0%{
         left: 0px;
     }
-    to{
-        left: -100px;
+    30%{
+        left: -40px;
+    }
+    100%{
+        left: 20px;
     }
 }
 
 @keyframes anim{
-    from{
+    0%{
         left: 0px;
     }
-    to{
-        left: -100px;
+    30%{
+        left: -40px;
+    }
+    100%{
+        left: 20px;
     }
 }
 
@@ -113,10 +119,10 @@
     position: absolute;
     margin-top: -4px ;
     margin-left: -58px;
-    background-color: #fedb00;
+    background-color: #efea38;
 }
 
-#mesaj{    
+#mesaj{
     height: 75px;
     position: absolute;
     display: inline-block;
@@ -131,6 +137,7 @@
     text-align: left;
     align-content: center;
     color: #da291c;
+    text-shadow: 0 0px 0 #ffffff
 
 }
 
@@ -138,5 +145,5 @@
     width: 300px;
     height: 75px;
     position: absolute;
-    margin: 175px 0 0 0;    
+    margin: 175px 0 0 0;
 }

@@ -4,20 +4,23 @@ var center = "0px";//center position
 var leftMargin = "-266px";//left position outside 
 var rightMargin = "150px";//right position outside
 var swipe = false;
+var swipeFinished = true;
 
 $(document).ready(function () {
     initPosition();
     $(".swipe").on("swiperight", function () {
         swipe = true;
-        swiperight();
+        if(swipeFinished)
+            swiperight();
     })
     $(".swipe").on("swipeleft", function () {
         swipe = true;
-        swipeleft();
+        if(swipeFinished)
+            swipeleft();
     })
     $(".swipe").click(function(){
         if(!swipe)
-            window.open("https://gustullays.ro/"); 
+            window.open("https://gustullays.ro/");         
         swipe = false;
     });
     $("#sageata").animate({left: "-300px"}, 2000, function(){
@@ -49,11 +52,13 @@ function resetRight(){
 }
 
 function swiperight(){
+    swipeFinished = false;
     if(index > 0){
         $(premii[index]).removeClass("premiu-anim");
         $(premii[index]).animate({left: rightMargin});
         $(premii[index-1]).animate({left: center}, "fast", function(){
             $(this).addClass("premiu-anim");
+            swipeFinished = true;
         });
         index--;
     }else{
@@ -63,6 +68,7 @@ function swiperight(){
         index = 2;
         
         $(premii[index]).animate({left: center}, "fast", function(){
+            swipeFinished = true;
             $(this).addClass("premiu-anim");
             $(premii[0]).css("opacity", "0");
             $(premii[0]).animate({left: leftMargin}, "fast", function(){$(this).css("opacity", "1");});
@@ -71,11 +77,13 @@ function swiperight(){
 }
 
 function swipeleft(){
+    swipeFinished = false;
     if(index < premii.length-1){
         $(premii[index]).removeClass("premiu-anim");
         $(premii[index]).animate({left: leftMargin});
         $(premii[index+1]).animate({left: center}, "fast", function(){
             $(this).addClass("premiu-anim");
+            swipeFinished = true;
         });
         index++;
     }else{
@@ -85,6 +93,7 @@ function swipeleft(){
         
         index = 0;
         $(premii[index]).animate({left: center}, "fast", function(){
+            swipeFinished = true;
             $(this).addClass("premiu-anim");
             $(premii[2]).css("opacity", "0");
             $(premii[2]).animate({left: rightMargin}, "fast", function(){$(this).css("opacity", "1");});
