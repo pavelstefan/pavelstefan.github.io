@@ -1,0 +1,12 @@
+#container{
+    position: absolute;
+    width: 320px;
+    height: 240px;
+    background-color: antiquewhite;
+    z-index: 1;
+}
+input{
+    width: 95%;
+    height: 30px;
+    margin-left: 5px;
+}
