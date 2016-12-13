@@ -9,26 +9,24 @@ window.addEventListener("resize", function(){
     main();
 });
 
-$(document).ready(function(){
-    $("#game").on("tap",function(){
-        if(!play)
-            return;
-        if(games > 0){
-            games--;
-            generateGame();
-            play = false;
+function tapEv(){
+    if(!play)
+        return;
+    if(games > 0){
+        games--;
+        generateGame();
+        play = false;
 
-            /*Start Loop*/
-            document.getElementById("aaa").innerHTML = "Mutari: " + games;
-            loopID = setInterval(Loop, 60/1000);
-            setTimeout(function(){
-                gameStop = true;
-            }, 1000);
-        }else{
-            location.reload();
-        }
-    });
-});
+        /*Start Loop*/
+        document.getElementById("aaa").innerHTML = "Mutari: " + games;
+        loopID = setInterval(Loop, 60/1000);
+        setTimeout(function(){
+            gameStop = true;
+        }, 1000);
+    }else{
+        location.reload();
+    }
+}
 
 window.addEventListener("keypress", function(){
     if(!play)
@@ -62,7 +60,6 @@ function generateGame(){
         prize = t[1];
     }
     ticket = t;
-    console.log(t);
 }
 
 function setResolution(){
@@ -82,6 +79,7 @@ function main(){
     document.body.appendChild(canvas);
     
     canvas = document.getElementById("game");
+    canvas.addEventListener("touchstart", tapEv, false);
     ctx = canvas.getContext("2d");
     setResolution();
     ctx.drawImage(images[0], 0, 0, canvas.width, canvas.height);
