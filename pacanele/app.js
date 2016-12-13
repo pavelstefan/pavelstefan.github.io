@@ -20,7 +20,7 @@ $(document).ready(function(){
 
             /*Start Loop*/
             document.getElementById("aaa").innerHTML = "Mutari: " + games;
-            Loop();
+            loopID = setInterval(Loop, 60/1000);
             setTimeout(function(){
                 gameStop = true;
             }, 1000);
@@ -29,8 +29,6 @@ $(document).ready(function(){
         }
     });
 });
-
-
 
 window.addEventListener("keypress", function(){
     if(!play)
@@ -42,7 +40,7 @@ window.addEventListener("keypress", function(){
         
         /*Start Loop*/
         document.getElementById("aaa").innerHTML = "Mutari: " + games;
-        Loop();
+        loopID = setInterval(Loop, 60/1000);
         setTimeout(function(){
             gameStop = true;
         }, 1000);
@@ -166,9 +164,8 @@ function Loop(){
     drawPrizes(600, 0, dy3);
     drawSquares();
     
-    if(!(stop[0] && stop[1] && stop[2]))
-        window.requestAnimationFrame(Loop);
-    else{
+    if(stop[0] && stop[1] && stop[2]){
+        clearInterval(loopID);
         if(prize >= 0)
             alert("ai castiga " + premii[prize]);
         else
