@@ -9,7 +9,7 @@ window.addEventListener("resize", function(){
     main();
 });
 
-window.addEventListener("click", function(){
+window.addEventListener("touchstart", function(){
     if(!play)
         return;
     if(games > 0){
