@@ -10,17 +10,9 @@ var canvas = null,
     ticket = [],
     prize = -1,
     stop = [false, false, false, false, false],
+    play = true,
     premii = ["Cafea",
               "Origami",
               "Bratara",
               "Sticker",
               "Carte"];
-
-
-/*
-    carte
-    cafea
-    origami
-    bratara
-    sticker
-*/

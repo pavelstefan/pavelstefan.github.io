@@ -9,11 +9,14 @@ window.addEventListener("resize", function(){
     main();
 });
 
-window.addEventListener("keypress", function(){
-    
+window.addEventListener("click", function(){
+    if(!play)
+        return;
     if(games > 0){
         games--;
         generateGame();
+        play = false;
+        
         /*Start Loop*/
         document.getElementById("aaa").innerHTML = "Mutari: " + games;
         Loop();
@@ -25,9 +28,24 @@ window.addEventListener("keypress", function(){
     }
 });
 
-function reset(){
-    games = 3;
-}
+window.addEventListener("keypress", function(){
+    if(!play)
+        return;
+    if(games > 0){
+        games--;
+        play = false;
+        generateGame();
+        
+        /*Start Loop*/
+        document.getElementById("aaa").innerHTML = "Mutari: " + games;
+        Loop();
+        setTimeout(function(){
+            gameStop = true;
+        }, 1000);
+    }else{
+        location.reload();
+    }
+});
 
 function generateGame(){
     prize = -1;
@@ -151,5 +169,6 @@ function Loop(){
             alert("ai castiga " + premii[prize]);
         else
             alert("mai incearca");
+        play = true;
     }
 }
