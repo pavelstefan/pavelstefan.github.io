@@ -36,7 +36,7 @@ function generateGame(){
     var length = 3,
         t = [];
     for(var i = 0; i < 3; i++){
-        t[i] = Math.floor(Math.random(99999) * 100) % 3;
+        t[i] = Math.floor(Math.random(99999) * 10) % 3;
     }
     if(t[1] == t[0] && t[1] == t[2]){
         prize = t[1];
@@ -57,6 +57,10 @@ function loadImages(imgs){
 }
 
 function main(){
+    canvas = document.createElement("canvas");
+    canvas.setAttribute("id", "game");
+    document.body.appendChild(canvas);
+    
     canvas = document.getElementById("game");
     ctx = canvas.getContext("2d");
     setResolution();
@@ -87,7 +91,6 @@ function drawPrizes(x, y, dy){
         maxH = 2000;
     if(dy > maxH){
         ctx.drawImage(images[1], dx, 0, dw, dh, offsetX + x, offsetY + (2500 - dy), sw, dy - maxH);
-        ctx.stroke();
     }
     ctx.drawImage(images[1], dx, dy, dw, dh, offsetX + x, offsetY + y, sw, sh);
 }
