@@ -9,24 +9,28 @@ window.addEventListener("resize", function(){
     main();
 });
 
-window.addEventListener("touchstart", function(){
-    if(!play)
-        return;
-    if(games > 0){
-        games--;
-        generateGame();
-        play = false;
-        
-        /*Start Loop*/
-        document.getElementById("aaa").innerHTML = "Mutari: " + games;
-        Loop();
-        setTimeout(function(){
-            gameStop = true;
-        }, 1000);
-    }else{
-        location.reload();
-    }
+$(document).ready(function(){
+    $("#game").on("tap",function(){
+        if(!play)
+            return;
+        if(games > 0){
+            games--;
+            generateGame();
+            play = false;
+
+            /*Start Loop*/
+            document.getElementById("aaa").innerHTML = "Mutari: " + games;
+            Loop();
+            setTimeout(function(){
+                gameStop = true;
+            }, 1000);
+        }else{
+            location.reload();
+        }
+    });
 });
+
+
 
 window.addEventListener("keypress", function(){
     if(!play)
