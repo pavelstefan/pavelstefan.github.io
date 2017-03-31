@@ -7,7 +7,7 @@ function setup() {
     window.IMG = null;
     cnv = createCanvas(300, 250);
     capture = createCapture(constraints);
-    //capture.hide();
+    capture.hide();
 }
 
 function draw() {
