@@ -13,7 +13,7 @@
     }
     
     //events
-    pag1.addEventListener('click', pag1H);
+    pag1.addEventListener('touchstart', pag1H);
     pungi[0].addEventListener('click', punga1);
     pungi[1].addEventListener('click', punga2);
     pungi[2].addEventListener('click', punga3);
