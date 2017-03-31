@@ -42,6 +42,10 @@
         
         window.addEventListener('click', takePhoto);
         window.animationActive = true;
+        
+        cnv = createCanvas(300, 250);
+        capture = createCapture(constraints);
+        capture.hide();
     }
     
     function punga2(){
@@ -60,6 +64,10 @@
         
         window.addEventListener('click', takePhoto);
         window.animationActive = true;
+        
+        cnv = createCanvas(300, 250);
+        capture = createCapture(constraints);
+        capture.hide();
     }
     
     function punga3(){
@@ -78,6 +86,10 @@
         
         window.addEventListener('click', takePhoto);
         window.animationActive = true;
+        
+        cnv = createCanvas(300, 250);
+        capture = createCapture(constraints);
+        capture.hide();
     }
     
     function punga4(){
@@ -96,6 +108,10 @@
         
         window.addEventListener('click', takePhoto);
         window.animationActive = true;
+        
+        cnv = createCanvas(300, 250);
+        capture = createCapture(constraints);
+        capture.hide();
     }
     
 })();
