@@ -13,6 +13,8 @@
     }
     
     //events
+    
+    $("#p1").on('tap', pag1H);
     pag1.addEventListener('touchstart', pag1H);
     pungi[0].addEventListener('click', punga1);
     pungi[1].addEventListener('click', punga2);
