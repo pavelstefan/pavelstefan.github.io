@@ -49,6 +49,10 @@
         capture = createCapture(constraints);
         capture.hide();
         document.body.appendChild(banner[0]);
+        
+        var d = document.getElementsByTagName('div');
+        d[0].parentNode.removeChild(d[0]);
+        d[0].parentNode.removeChild(d[0]);
     }
     
     function punga2(){
@@ -67,6 +71,10 @@
         capture = createCapture(constraints);
         capture.hide();
         document.body.appendChild(banner[0]);
+        
+        var d = document.getElementsByTagName('div');
+        d[0].parentNode.removeChild(d[0]);
+        d[0].parentNode.removeChild(d[0]);
     }
     
     function punga3(){
@@ -85,6 +93,10 @@
         capture = createCapture(constraints);
         capture.hide();
         document.body.appendChild(banner[0]);
+        
+        var d = document.getElementsByTagName('div');
+        d[0].parentNode.removeChild(d[0]);
+        d[0].parentNode.removeChild(d[0]);
     }
     
     function punga4(){
@@ -104,7 +116,6 @@
         capture.hide();
         document.body.appendChild(banner[0]);
         var d = document.getElementsByTagName('div');
-        console.log(d);
         d[0].parentNode.removeChild(d[0]);
         d[0].parentNode.removeChild(d[0]);
     }
