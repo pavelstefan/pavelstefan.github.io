@@ -1,25 +1,25 @@
 (function(){
     
-    var pag1 = document.getElementById('p1');
-    var pag2 = document.getElementById('p2');
-    var termeni = document.getElementById('termeni');
+    var pag1 = $('#p1');
+    var pag2 = $('#p2');
+    var termeni = $('#termeni');
     var pungi = [];
     var selfieImg = 0;
     window.animationActive = false;
     
     for(let i = 0; i < 4; i++){
         let ii = i+1;
-        pungi[i] = document.getElementById('i' + ii);
+        pungi[i] = $('#i' + ii);
     }
     
     //events
     
-    $("#p1").on('tap', pag1H);
-    pag1.addEventListener('touchstart', pag1H);
-    pungi[0].addEventListener('click', punga1);
-    pungi[1].addEventListener('click', punga2);
-    pungi[2].addEventListener('click', punga3);
-    pungi[3].addEventListener('click', punga4);
+    pag1.on('tap', pag1H);
+    
+    pungi[0].on('tap', punga1);
+    pungi[1].on('tap', punga2);
+    pungi[2].on('tap', punga3);
+    pungi[3].on('tap', punga4);
     
     
     //handlers
@@ -36,13 +36,7 @@
         selfieImg = 1;
         window.IMG = loadImage(selfieImg + '.png');
         
-        pag1.removeEventListener('click', pag1H);
-        pungi[0].removeEventListener('click', punga1);
-        pungi[1].removeEventListener('click', punga2);
-        pungi[2].removeEventListener('click', punga3);
-        pungi[3].removeEventListener('click', punga4);
-        
-        window.addEventListener('click', takePhoto);
+        window.on('tap', takePhoto);
         window.animationActive = true;
         
         cnv = createCanvas(300, 250);
@@ -58,13 +52,7 @@
         selfieImg = 2;
         window.IMG = loadImage(selfieImg + '.png');
         
-        pag1.removeEventListener('click', pag1H);
-        pungi[0].removeEventListener('click', punga1);
-        pungi[1].removeEventListener('click', punga2);
-        pungi[2].removeEventListener('click', punga3);
-        pungi[3].removeEventListener('click', punga4);
-        
-        window.addEventListener('click', takePhoto);
+        window.on('tap', takePhoto);
         window.animationActive = true;
         
         cnv = createCanvas(300, 250);
@@ -80,13 +68,7 @@
         selfieImg = 3;
         window.IMG = loadImage(selfieImg + '.png');
         
-        pag1.removeEventListener('click', pag1H);
-        pungi[0].removeEventListener('click', punga1);
-        pungi[1].removeEventListener('click', punga2);
-        pungi[2].removeEventListener('click', punga3);
-        pungi[3].removeEventListener('click', punga4);
-        
-        window.addEventListener('click', takePhoto);
+        window.on('tap', takePhoto);
         window.animationActive = true;
         
         cnv = createCanvas(300, 250);
@@ -102,13 +84,7 @@
         selfieImg = 4;
         window.IMG = loadImage(selfieImg + '.png');
         
-        pag1.removeEventListener('click', pag1H);
-        pungi[0].removeEventListener('click', punga1);
-        pungi[1].removeEventListener('click', punga2);
-        pungi[2].removeEventListener('click', punga3);
-        pungi[3].removeEventListener('click', punga4);
-        
-        window.addEventListener('click', takePhoto);
+        window.on('tap', takePhoto);
         window.animationActive = true;
         
         cnv = createCanvas(300, 250);
