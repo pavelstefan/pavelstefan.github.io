@@ -41,7 +41,7 @@ video{
 }
 
 #i1, #i2{
-    margin-top: 30px;
+    margin-top: 15px;
 }
 
 #p2 img{
@@ -53,15 +53,6 @@ video{
 #p1 img{
     margin-left: 100px;
     margin-top: 50px;
-}
-
-#termeni{
-    position: absolute;
-    margin: 10px 30px;
-}
-a{
-    position: absolute;
-    margin: 5px 60px;
 }
 
 canvas{

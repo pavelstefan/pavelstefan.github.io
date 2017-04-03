@@ -30,9 +30,6 @@
     }
     
     function punga1(){
-        if(!termeni.checked)
-            return;
-        
         pag2[0].style.display = 'none';
         selfieImg = 1;
         window.IMG = loadImage(selfieImg + '.png');
@@ -53,9 +50,6 @@
     }
     
     function punga2(){
-        if(!termeni.checked)
-            return;
-        
         pag2[0].style.display = 'none';
         selfieImg = 2;
         window.IMG = loadImage(selfieImg + '.png');
@@ -75,9 +69,6 @@
     }
     
     function punga3(){
-        if(!termeni.checked)
-            return;
-        
         pag2[0].style.display = 'none';
         selfieImg = 3;
         window.IMG = loadImage(selfieImg + '.png');
@@ -97,9 +88,6 @@
     }
     
     function punga4(){
-        if(!termeni.checked)
-            return;
-        
         pag2[0].style.display = 'none';
         selfieImg = 4;
         window.IMG = loadImage(selfieImg + '.png');
