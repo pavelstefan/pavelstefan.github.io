@@ -50,4 +50,6 @@ function takePhoto(){
     });*/
     
     resizeCanvas(300, 250);
+    let thx = document.getElementById('p3');
+    thx.style.display = 'inline';
 }
