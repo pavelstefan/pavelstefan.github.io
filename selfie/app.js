@@ -14,8 +14,8 @@
     
     //events
     
-    pag1.bind('tap', pag1H);
-    pag1.bind('click', pag1H);
+    $('#p1').bind('tap', pag1H);
+    $('#p1').bind('click', pag1H);
     
     pungi[0].bind('tap', punga1);
     pungi[1].bind('tap', punga2);
