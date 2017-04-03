@@ -1,5 +1,6 @@
 (function(){
     
+    var banner = $('#banner');
     var pag1 = $('#p1');
     var pag2 = $('#p2');
     var termeni = $('#termeni');
@@ -11,6 +12,8 @@
         let ii = i+1;
         pungi[i] = $('#i' + ii);
     }
+    
+    
     
     //events
     
@@ -25,7 +28,6 @@
     
     //handlers
     function pag1H(){
-        alert();
         pag1[0].style.display = 'none';
         pag2[0].style.display = 'inline';
     }
@@ -42,8 +44,11 @@
         window.animationActive = true;
         
         cnv = createCanvas(300, 250);
+        cnv.canvas.setAttribute('data-role', 'none');
+        banner[0].appendChild(cnv.canvas);
         capture = createCapture(constraints);
         capture.hide();
+        document.body.appendChild(banner[0]);
     }
     
     function punga2(){
@@ -58,8 +63,10 @@
         window.animationActive = true;
         
         cnv = createCanvas(300, 250);
+        banner[0].appendChild(cnv.canvas);
         capture = createCapture(constraints);
         capture.hide();
+        document.body.appendChild(banner[0]);
     }
     
     function punga3(){
@@ -74,8 +81,10 @@
         window.animationActive = true;
         
         cnv = createCanvas(300, 250);
+        banner[0].appendChild(cnv.canvas);
         capture = createCapture(constraints);
         capture.hide();
+        document.body.appendChild(banner[0]);
     }
     
     function punga4(){
@@ -90,8 +99,14 @@
         window.animationActive = true;
         
         cnv = createCanvas(300, 250);
+        banner[0].appendChild(cnv.canvas);
         capture = createCapture(constraints);
         capture.hide();
+        document.body.appendChild(banner[0]);
+        var d = document.getElementsByTagName('div');
+        console.log(d);
+        d[0].parentNode.removeChild(d[0]);
+        d[0].parentNode.removeChild(d[0]);
     }
     
 })();
