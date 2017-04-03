@@ -15,6 +15,7 @@
     //events
     
     pag1.on('tap', pag1H);
+    pag1.on('click', pag1H);
     
     pungi[0].on('tap', punga1);
     pungi[1].on('tap', punga2);
@@ -24,6 +25,7 @@
     
     //handlers
     function pag1H(){
+        alert();
         pag1[0].style.display = 'none';
         pag2[0].style.display = 'inline';
     }
