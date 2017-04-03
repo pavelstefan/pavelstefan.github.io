@@ -55,19 +55,13 @@ video{
     margin-top: 50px;
 }
 
-label{
-    position: absolute;
-    margin-top: 0px;
-    margin-left: 50px;
-    pointer-events: none;
-}
-
-form{
-    pointer-events: none;
-}
-
 #termeni{
-    pointer-events: auto;
+    position: absolute;
+    margin: 10px 30px;
+}
+a{
+    position: absolute;
+    margin: 5px 60px;
 }
 
 canvas{
