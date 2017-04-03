@@ -15,7 +15,11 @@ video{
     width: 300px;
     height: 250px;
     overflow: hidden;
-    opacity: 0;
+    pointer-events: none;
+}
+
+#banner *{
+    pointer-events: auto;
 }
 
 .page{
