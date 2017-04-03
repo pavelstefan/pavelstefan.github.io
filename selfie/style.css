@@ -59,6 +59,11 @@ label{
     position: absolute;
     margin-top: 0px;
     margin-left: 50px;
+    pointer-events: none;
+}
+
+form{
+    pointer-events: none;
 }
 
 canvas{
