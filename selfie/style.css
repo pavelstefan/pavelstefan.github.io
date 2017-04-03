@@ -34,9 +34,13 @@ video{
 
 #p1{
     display: inline;
+    background-image: url('bg1.jpg');
 }
 
 #p2{
+    display: none;
+}
+#p3{
     display: none;
 }
 
