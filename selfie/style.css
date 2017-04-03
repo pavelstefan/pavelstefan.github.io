@@ -66,6 +66,10 @@ form{
     pointer-events: none;
 }
 
+#termeni{
+    pointer-events: auto;
+}
+
 canvas{
     position: absolute;
     margin-top: 0px;
