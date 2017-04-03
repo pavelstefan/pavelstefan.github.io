@@ -14,13 +14,13 @@
     
     //events
     
-    pag1.on('tap', pag1H);
-    pag1.on('click', pag1H);
+    pag1.bind('tap', pag1H);
+    pag1.bind('click', pag1H);
     
-    pungi[0].on('tap', punga1);
-    pungi[1].on('tap', punga2);
-    pungi[2].on('tap', punga3);
-    pungi[3].on('tap', punga4);
+    pungi[0].bind('tap', punga1);
+    pungi[1].bind('tap', punga2);
+    pungi[2].bind('tap', punga3);
+    pungi[3].bind('tap', punga4);
     
     
     //handlers
@@ -38,7 +38,7 @@
         selfieImg = 1;
         window.IMG = loadImage(selfieImg + '.png');
         
-        $('canvas').on('tap', takePhoto);
+        $('canvas').bind('tap', takePhoto);
         window.animationActive = true;
         
         cnv = createCanvas(300, 250);
@@ -54,7 +54,7 @@
         selfieImg = 2;
         window.IMG = loadImage(selfieImg + '.png');
         
-        $('canvas').on('tap', takePhoto);
+        $('canvas').bind('tap', takePhoto);
         window.animationActive = true;
         
         cnv = createCanvas(300, 250);
@@ -70,7 +70,7 @@
         selfieImg = 3;
         window.IMG = loadImage(selfieImg + '.png');
         
-        $('canvas').on('tap', takePhoto);
+        $('canvas').bind('tap', takePhoto);
         window.animationActive = true;
         
         cnv = createCanvas(300, 250);
@@ -86,7 +86,7 @@
         selfieImg = 4;
         window.IMG = loadImage(selfieImg + '.png');
         
-        $('canvas').on('tap', takePhoto);
+        $('canvas').bind('tap', takePhoto);
         window.animationActive = true;
         
         cnv = createCanvas(300, 250);
