@@ -13,10 +13,7 @@
         pungi[i] = $('#i' + ii);
     }
     
-    
-    
     //events
-    
     $('#p1').on('tap', pag1H);
     $('#p1').on('click', pag1H);
     
@@ -33,8 +30,8 @@
     }
     
     function punga1(){
-        /*if(!termeni.checked)
-            return;*/
+        if(!termeni.checked)
+            return;
         
         pag2[0].style.display = 'none';
         selfieImg = 1;
@@ -56,8 +53,8 @@
     }
     
     function punga2(){
-        /*if(!termeni.checked)
-            return;*/
+        if(!termeni.checked)
+            return;
         
         pag2[0].style.display = 'none';
         selfieImg = 2;
@@ -78,8 +75,8 @@
     }
     
     function punga3(){
-        /*if(!termeni.checked)
-            return;*/
+        if(!termeni.checked)
+            return;
         
         pag2[0].style.display = 'none';
         selfieImg = 3;
@@ -100,8 +97,8 @@
     }
     
     function punga4(){
-        /*if(!termeni.checked)
-            return;*/
+        if(!termeni.checked)
+            return;
         
         pag2[0].style.display = 'none';
         selfieImg = 4;
