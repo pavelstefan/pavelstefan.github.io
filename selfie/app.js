@@ -3,7 +3,7 @@
     var banner = $('#banner');
     var pag1 = $('#p1');
     var pag2 = $('#p2');
-    var termeni = $('#termeni');
+    var termeni = $('#acordTermeni');
     var pungi = [];
     var selfieImg = 0;
     window.animationActive = false;
