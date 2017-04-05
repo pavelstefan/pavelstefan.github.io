@@ -39,11 +39,9 @@ function takePhoto(){
             'img': cnv.canvas.toDataURL()
         },
         success: function(msg){
-            alert('ok');
             console.log(msg);
         },
         error: function(msg){
-            alert('err');
             console.log(msg);
         },
         dataType: 'text'
