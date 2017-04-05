@@ -52,4 +52,7 @@ function takePhoto(){
     let thx = document.getElementById('p3');
     thx.style.display = 'inline';
     document.getElementById('tag').setAttribute('src', 'javascript:window.open(window.clickTag)');
+    $(document).bind('tap', function(){
+        window.open(window.clickTag);
+    })
 }
