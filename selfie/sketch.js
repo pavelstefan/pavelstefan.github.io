@@ -50,7 +50,7 @@ function takePhoto(){
     resizeCanvas(300, 250);
     let thx = document.getElementById('p3');
     thx.style.display = 'inline';
-    window.addEventListener('click', function(){
+    window.addEventListener('tap', function(){
         console.log('click');
         window.open(window.clickTag);
     })
