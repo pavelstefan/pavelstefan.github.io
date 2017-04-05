@@ -11,6 +11,7 @@ video{
 
 #termeni{
     position: absolute;
+    z-index: 99;
     margin-top: 150px;
 }
 
