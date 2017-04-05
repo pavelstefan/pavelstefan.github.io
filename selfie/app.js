@@ -25,6 +25,7 @@
     
     //handlers
     function pag1H(){
+        cnsole.log("click");
         if(termeni[0].checked != true)
             return;
         pag1[0].style.display = 'none';
