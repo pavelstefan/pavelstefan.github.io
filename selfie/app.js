@@ -22,6 +22,13 @@
     pungi[2].bind('tap', punga3);
     pungi[3].bind('tap', punga4);
     
+    termeni.bind('tap', function(){
+        termeni[0].checked = true;
+    })
+    
+    $('#termeni').bind('tap', function(){
+        termeni[0].checked = true;
+    })
     
     //handlers
     function pag1H(){
