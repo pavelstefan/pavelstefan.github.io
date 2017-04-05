@@ -13,11 +13,11 @@
         <script src="sketch.js"></script>
         <script>
             var clickTag = "http://google.ro";
-            function btn(){
-                let c = document.getElementById('termeni');
-                c.checked = true;
-                alert('check');
-            }
+            $(document).ready(function(){
+                $('#tag').bind('tap', function(){
+                    window.open(window.clickTag);
+                });
+            });
         </script>
         
         <link rel="stylesheet" href="style.css">
@@ -35,7 +35,7 @@
                 <img src="4.png" id="i4" alt="punga 4" data-role="none">
             </div>
             
-            <a href="javascript:window.open(window.clickTag)" data-role="none">
+            <a href="javascript:window.open(window.clickTag)" data-role="none" id="tag">
                 <div id="p3" class="page" data-role="none"></div>
             </a>
         </div>
