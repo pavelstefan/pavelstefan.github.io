@@ -39,13 +39,15 @@ video{
 
 #p2{
     display: none;
+    background-image: url('bg2.jpg');
 }
 #p3{
     display: none;
+    background-image: url('bg3.jpg');
 }
 
 #i1, #i2{
-    margin-top: 15px;
+    margin-top: 25px;
 }
 
 #p2 img{
