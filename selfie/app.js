@@ -25,7 +25,10 @@
     
     //handlers
     function pag1H(){
+        if(termeni[0].checked != true)
+            return;
         pag1[0].style.display = 'none';
+        termeni[0].style.display = 'none';
         pag2[0].style.display = 'inline';
     }
     
