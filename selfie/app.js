@@ -14,6 +14,10 @@
     }
     
     //events
+    $('#tag').bind('tap', function(){
+        window.open(window.clickTag);
+    });
+    
     $('#p1').on('tap', pag1H);
     $('#p1').on('click', pag1H);
     
