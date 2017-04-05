@@ -13,12 +13,9 @@
         <script src="sketch.js"></script>
         <script>
             var clickTag = "http://google.ro";
-            $(document).ready(function(){
-                console.log('loaded');
-                $('#tag').bind('tap', function(){
-                    console.log('click');
-                    window.open(window.clickTag);
-                });
+            $('#tag').bind('tap', function(){
+                console.log('click');
+                window.open(window.clickTag);
             });
         </script>
         
