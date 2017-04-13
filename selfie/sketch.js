@@ -10,8 +10,16 @@ function setup() {
 
 function draw() {
     background(255, 219, 0);
+    
     if(!window.animationActive)
         return;
+    
+    if(!window.permision){
+        window.permision = false;
+        capture = createCapture(constraints, function(){}, function(){}, function(){window.permision = true});
+        return;
+    }
+    
     photoActive = true;
     if(photo)
         capture.pause();
@@ -21,6 +29,11 @@ function draw() {
 }
 
 function takePhoto(){
+    if(!window.permision){
+        window.permision = false;
+        capture = createCapture(constraints, function(){}, function(){}, function(){window.permision = true});
+        return;
+    }
     if(!window.animationActive || !photoActive)
         return;
     photo = true;

@@ -51,9 +51,8 @@
         cnv = createCanvas(300, 250);
         cnv.canvas.setAttribute('data-role', 'none');
         banner[0].appendChild(cnv.canvas);
-        capture = createCapture(constraints);
-        console.log(capture);
-        alert(capture._pInstace);
+        window.permision = false;
+        capture = createCapture(constraints, function(){}, function(){}, function(){window.permision = true}); 
         capture.hide();
         document.body.appendChild(banner[0]);
         
@@ -72,7 +71,8 @@
         
         cnv = createCanvas(300, 250);
         banner[0].appendChild(cnv.canvas);
-        capture = createCapture(constraints);
+        window.permision = false;
+        capture = createCapture(constraints, function(){}, function(){}, function(){window.permision = true}); 
         capture.hide();
         document.body.appendChild(banner[0]);
         
@@ -91,7 +91,8 @@
         
         cnv = createCanvas(300, 250);
         banner[0].appendChild(cnv.canvas);
-        capture = createCapture(constraints);
+        window.permision = false;
+        capture = createCapture(constraints, function(){}, function(){}, function(){window.permision = true}); 
         capture.hide();
         document.body.appendChild(banner[0]);
         
@@ -110,7 +111,8 @@
         
         cnv = createCanvas(300, 250);
         banner[0].appendChild(cnv.canvas);
-        capture = createCapture(constraints);
+        window.permision = false;
+        capture = createCapture(constraints, function(){}, function(){}, function(){window.permision = true}); 
         capture.hide();
         document.body.appendChild(banner[0]);
         var d = document.getElementsByTagName('div');
