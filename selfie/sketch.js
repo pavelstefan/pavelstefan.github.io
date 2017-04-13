@@ -14,12 +14,6 @@ function draw() {
     if(!window.animationActive)
         return;
     
-    /*if(!window.permision){
-        window.permision = false;
-        capture = createCapture(constraints, function(){}, function(){}, function(){window.permision = true});
-        return;
-    }*/
-    
     photoActive = true;
     if(photo)
         capture.pause();
@@ -44,9 +38,9 @@ function takePhoto(){
     image(capture, 0, 0, 570, 480);
     image(window.IMG, 210, 350, 172, 268);
     
-    window.open(cnv.canvas.toDataURL());
+    //window.open(cnv.canvas.toDataURL());
     
-    /*$.ajax({
+    $.ajax({
         type: 'POST',
         url: 'https://api.gustullays.ro/api/v1.0/save-selfie',
         data: { 
@@ -59,7 +53,7 @@ function takePhoto(){
             console.log(msg);
         },
         dataType: 'text'
-    });*/
+    });
     
     resizeCanvas(300, 250);
     let thx = document.getElementById('p3');

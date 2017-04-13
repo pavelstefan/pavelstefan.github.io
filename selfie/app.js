@@ -32,7 +32,6 @@
     
     //handlers
     function pag1H(){
-        console.log("checkbox: " + termeni[0].checked);
         if(termeni[0].checked != true)
             return;
         pag1[0].style.display = 'none';
