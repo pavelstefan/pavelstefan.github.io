@@ -14,11 +14,11 @@ function draw() {
     if(!window.animationActive)
         return;
     
-    if(!window.permision){
+    /*if(!window.permision){
         window.permision = false;
         capture = createCapture(constraints, function(){}, function(){}, function(){window.permision = true});
         return;
-    }
+    }*/
     
     photoActive = true;
     if(photo)
