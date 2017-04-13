@@ -52,6 +52,8 @@
         cnv.canvas.setAttribute('data-role', 'none');
         banner[0].appendChild(cnv.canvas);
         capture = createCapture(constraints);
+        console.log(capture);
+        alert(capture._pInstace);
         capture.hide();
         document.body.appendChild(banner[0]);
         
